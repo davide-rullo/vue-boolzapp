@@ -7,6 +7,10 @@
     --bz-app-focus: #8EDAFC;
 }
 
+i{
+    color: rgba(128, 128, 128, 0.651);
+}
+
 .top-bg{
     background-color: var(--bz-app-header);
     height: 100px;
@@ -26,14 +30,38 @@
     background-color: white;
     position: absolute;
     top: 40px;
+    padding: 0;
 }
 
 .left{
     width: 30%;
-    background-color: red;
+    background-color: var(--bz-app-white);
+    
+    
 }
 
 .right{
     width: 100%;
     background-color: #8EDAFC;
+}
+
+.user-thumb{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.user-me{
+    height: 50px;
+    background-color: var(--bz-app-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: .4rem;
+}
+
+.user-me-icons{
+    display: flex;
+    gap: 1rem;
 }
