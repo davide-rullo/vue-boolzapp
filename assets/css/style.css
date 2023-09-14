@@ -1,0 +1,29 @@
+:root {
+    --bz-app-principal: #DBDBD2;
+    --bz-app-header: #009688;
+    --bz-app-success: #D5F9BA;
+    --bz-app-light: #E9EBEB;
+    --bz-app-white: #FFFFFF;
+    --bz-app-focus: #8EDAFC;
+}
+
+.top-bg{
+    background-color: var(--bz-app-header);
+    height: 100px;
+}
+
+.bottom-bg{
+    background: linear-gradient(180deg, #dddbd1, #d2dbdc);
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp{
+    height: 700px;
+    width: 80%;
+    background-color: white;
+    position: absolute;
+    top: 40px;
+}
