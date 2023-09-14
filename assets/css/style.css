@@ -26,7 +26,7 @@ h6, p{
 
 .bottom-bg {
     background: linear-gradient(180deg, #dddbd1, #d2dbdc);
-    height: 900px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +49,8 @@ h6, p{
 
 .right {
     width: 100%;
-    background-color: #76e268;
+    background-image: url("/assets/img/mine.jpg");
+    
 }
 
 .user-thumb {
@@ -115,10 +116,18 @@ h6, p{
     border: 1px solid #0000000d;
 }
 
-.last-msg{
+.last-msg ,.hour, .controls{
     color: grey;
 }
 
 .contact-name h6{
     margin: 0;
 }
+
+.contact-active{
+   background-color: var(--bz-app-light);
+   padding: .4rem;
+   height: 47.78px;
+   border-left: 1px solid #0000000d;
+}
+
