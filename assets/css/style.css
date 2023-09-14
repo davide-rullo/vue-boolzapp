@@ -38,6 +38,7 @@ h6, p{
     position: absolute;
     top: 40px;
     padding: 0;
+    height: 650px;
 }
 
 .left {
@@ -131,3 +132,51 @@ h6, p{
    border-left: 1px solid #0000000d;
 }
 
+.user-msg{
+    background-color: var(--bz-app-success);
+}
+
+.user-msg, .contact-msg{
+   
+    width: 250px;
+    padding: 1rem;
+    border-radius: 10px;
+    position: relative;
+    margin: 0 2rem;
+}
+
+.user-msg p, .contact-msg p{
+    margin: 0;
+}
+
+.contact-msg{
+    background-color: var(--bz-app-white);
+}
+
+.hour-sent p{
+ font-size: .5rem;
+ position: absolute;
+ bottom: 2px;
+ right: 5px;
+ color: grey;
+}
+
+.write-bar{
+    background-color: #F3EEEA;
+    height: 50px;
+    padding: 2rem;
+   
+}
+
+.write-bar i{
+    color: grey;
+}
+
+.all-contacts{
+    height: 400px;
+    overflow: auto;
+}
+
+.chat{
+    overflow: auto;
+}
