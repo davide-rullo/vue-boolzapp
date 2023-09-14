@@ -16,73 +16,92 @@
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
-        <header>
-            <div class="top-bg">
+        <div id="app">
+            <header>
+                <div class="top-bg">
 
-            </div>
-        </header>
-        <main>
-            <div class="bottom-bg">
-                <div class="container d-flex">
-                    <div class="left">
-                        <div class="user-me">
-                            <div class="user-me-profile">
-                                <div class="user-me-img">
-                                    <img class="user-thumb"
-                                        src="./assets/img/avatar_io.jpg" alt>
+                </div>
+            </header>
+            <main>
+                <div class="bottom-bg">
+                    <div class="container d-flex">
+                        <div class="left">
+                            <div class="user-me">
+                                <div class="user-me-profile">
+                                    <div class="user-me-img">
+                                        <img class="user-thumb"
+                                            src="./assets/img/avatar_io.jpg" alt>
+                                    </div>
+                                    <div class="user-me-name"><h6>Sofia</h6></div>
                                 </div>
-                                <div class="user-me-name"><h6>Sofia</h6></div>
-                            </div>
-                            <div class="user-me-icons">
-                                <a href="#"><i class="fa-solid fa-circle-notch"></i></a>
-                                <a href="#"><i class="fa-solid fa-message"></i></a>
-                                <a href="#"><i
-                                        class="fa-solid fa-ellipsis-vertical"></i></a>
-                            </div>
-
-                        </div>
-                        <div
-                            class="notify-msg p-2 d-flex align-items-center gap-2">
-                            <div class="circle p-1 d-flex align-items-center"><i
-                                    class="fa-solid fa-bell-slash fa-xl"></i></div>
-                            <div class="notify-text d-flex flex-column pt-2">
-                                <div class="notify-title"><h6>Ricevi notifiche
-                                        sui nuovi messaggi</h6>
+                                <div class="user-me-icons">
+                                    <a href="#"><i
+                                            class="fa-solid fa-circle-notch"></i></a>
+                                    <a href="#"><i class="fa-solid fa-message"></i></a>
+                                    <a href="#"><i
+                                            class="fa-solid fa-ellipsis-vertical"></i></a>
                                 </div>
-                                <div class="notify-subtitle">
-                                    <a href><p>Attiva notifiche desktop</p></a>
-                                </div>
+
                             </div>
-
-                        </div>
-                        <div class="search d-flex">
-                            <label for="exampleDataList" class="form-label"></label>
-                            <span class="input-group-text" id="addon-wrapping"><i
-                                    class="fa-solid fa-magnifying-glass"></i></span>
-                            <input class="form-control" list="datalistOptions"
-                                id="exampleDataList"
-                                placeholder="Cerca o inizia una nuova chat">
-                            <datalist id="datalistOptions">
-                                <option value="">
-
-                                </datalist>
-                            </div>
-                            <div class="contact">
-                                <div class="contact-img">
-                                  
+                            <div
+                                class="notify-msg p-2 d-flex align-items-center gap-2">
+                                <div
+                                    class="circle p-1 d-flex align-items-center"><i
+                                        class="fa-solid fa-bell-slash fa-xl"></i></div>
+                                <div class="notify-text d-flex flex-column pt-2">
+                                    <div class="notify-title"><h6>Ricevi
+                                            notifiche
+                                            sui nuovi messaggi</h6>
+                                    </div>
+                                    <div class="notify-subtitle">
+                                        <a href><p>Attiva notifiche desktop</p></a>
+                                    </div>
                                 </div>
-                                <div class="contact-info">
 
-                                </div>
                             </div>
-                        </div>
-                        <div class="right">
+                            <div class="search d-flex">
+                                <label for="exampleDataList" class="form-label"></label>
+                                <span class="input-group-text"
+                                    id="addon-wrapping"><i
+                                        class="fa-solid fa-magnifying-glass"></i></span>
+                                <input class="form-control"
+                                    list="datalistOptions"
+                                    id="exampleDataList"
+                                    placeholder="Cerca o inizia una nuova chat">
+                                <datalist id="datalistOptions">
+                                    <option value>
 
+                                    </datalist>
+                                </div>
+                                <template v-for="(contact, index) in contacts">
+                                    <div class="contact d-flex justify-content-between  p-2 ">
+                                        <div class="user-left d-flex gap-4">
+                                            <div class="user-pic d-flex justify-content-center align-items-center">
+                                                <img class="user-thumb" :src="contact.avatar" alt>
+                                            </div>
+                                            <div
+                                                class="contact-info d-flex flex-column">
+                                                <div class="contact-name">
+                                                    <h6>{{contact.name}}</h6>
+                                                </div>
+                                                <div class="last-msg">
+                                                    <p>Ultimo messaggio inviato</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hour">
+                                            <p>12.00</p>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                            <div class="right">
+
+                            </div>
                         </div>
                     </div>
-                </div>
-            </main>
-
+                </main>
+            </div>
             <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
             <script
                 src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

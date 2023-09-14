@@ -33,7 +33,7 @@ h6, p{
 }
 
 .container {
-    height: 80vh;
+    
     background-color: white;
     position: absolute;
     top: 40px;
@@ -109,4 +109,16 @@ h6, p{
 
 .search{
     padding: 0.5rem;
+}
+
+.contact{
+    border: 1px solid #0000000d;
+}
+
+.last-msg{
+    color: grey;
+}
+
+.contact-name h6{
+    margin: 0;
 }
