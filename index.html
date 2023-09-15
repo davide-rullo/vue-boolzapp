@@ -130,33 +130,13 @@
                                     </div>
                                 </div>
                                 <div class="chat d-flex flex-column">
-                                    
-                                        <div class="user-msg">
-                                            <p>Hai portato a spasso il cane ?</p>  <!--  dinamico -->
+                                        <div v-for="(message,index) in contacts[activeContact].messages" :class="message.status === 'sent' ? 'user-msg' : 'contact-msg'">
+                                            <p>{{contacts[activeContact].messages[index].message}}</p>  <!--  dinamico -->
                                             <div class="hour-sent">  
                                                 <p>15:30</p>  <!--  dinamico -->
                                             </div>
                                         </div>
-                                    
-                                   
-                                        <div class="user-msg d-flex">
-                                            <p>Hai portato a spasso il cane ?</p>  <!--  dinamico -->
-                                            <div class="hour-sent">
-                                                <p>16:15</p>  <!--  dinamico -->
-                                            </div>
-
-                                        </div>
-
-                                  
-                                   
-                                        <div class="contact-msg">
-                                            <p>Tutto fatto!</p>
-                                            <div class="hour-sent">
-                                                <p>15:50</p>
-                                            </div>
-                                        </div>
-                                    
-                                   
+                                      
                                 </div>
                                 <div class="write-bar d-flex justify-content-center align-items-center gap-4">
                                    <a href="#"><i class="fa-regular fa-face-smile"></i></a> 
