@@ -185,25 +185,23 @@ createApp({
             };
             this.contacts[activeContact].messages.push(newMsgObj);
             this.newMsg = '';
+            
+
+            msgAnswer = setTimeout(() => {
+                let answer = {
+                    date: '0',
+                    message: "Ok",
+                    status: 'received'
+                };
+                this.contacts[activeContact].messages.push(answer);
+            }, 1000)
+    
 
         },
 
-        msgAnswer(activeContact){
-            let answer = {
-                date: '0',
-                message: "Ok",
-                status: 'received'
-            };
-            this.contacts[activeContact].messages.push(answer);
-        },
-
-        msgAnswerTimeout(){
-            this.auto = setTimeout(this.msgAnswer, 3000);
-        }
+        
     },
 
-    created() {
-        this.msgAnswerTimeout()
-    }
+   
 
 }).mount('#app')
