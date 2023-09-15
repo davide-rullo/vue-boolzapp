@@ -139,7 +139,7 @@ h6, p{
 }
 
 .user-msg, .contact-msg{
-   
+   display: flex;
     width: 250px;
     padding: 1rem;
     border-radius: 10px;

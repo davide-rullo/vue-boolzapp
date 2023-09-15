@@ -170,6 +170,13 @@ createApp({
 
         };
 
+    },
+
+    methods: {
+        selectChat(index){
+            console.log("ho cliccato" + index);
+            this.activeContact = index;
+        }
     }
 
 }).mount('#app')

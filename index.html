@@ -77,7 +77,7 @@
                                 <!-- Contatti dinamici -->
                                 <div class="all-contacts">
                                 
-                                    <div class="contact d-flex justify-content-between p-2" :class="index === activeContact ? 'active' : '' " v-for="(contact, index) in contacts">
+                                    <div class="contact d-flex justify-content-between p-2" :class="index === activeContact ? 'active' : '' " v-for="(contact, index) in contacts" @click="selectChat(index)">
                                         <div class="user-left d-flex gap-4">
                                             <div
                                                 class="user-pic d-flex justify-content-center align-items-center">
