@@ -73,10 +73,11 @@
 
                                     </datalist>
                                 </div>
+
+                                <!-- Contatti dinamici -->
                                 <div class="all-contacts">
-                                <template v-for="(contact, index) in contacts">
-                                    <div
-                                        class="contact d-flex justify-content-between  p-2 ">
+                                
+                                    <div class="contact d-flex justify-content-between p-2" :class="index === activeContact ? 'active' : '' " v-for="(contact, index) in contacts">
                                         <div class="user-left d-flex gap-4">
                                             <div
                                                 class="user-pic d-flex justify-content-center align-items-center">
@@ -97,25 +98,26 @@
                                             <p>12:00</p>
                                         </div>
                                     </div>
-                                </template>
+                              
                             </div>
                             </div>
                             <div class="right d-flex flex-column justify-content-between">
-                                <div
-                                    class="contact-active d-flex justify-content-between align-items-center p-2 ">
+
+                                <!-- Inserire contatto dinamico -->
+                                <div class="contact-active d-flex justify-content-between align-items-center p-2">
                                     <div class="user-right d-flex gap-4 ">
-                                        <div
-                                            class="user-pic d-flex justify-content-center align-items-center">
-                                            <img class="user-thumb"
-                                                src="./assets/img/avatar_1.jpg"
-                                                alt>
+                                        
+                                        <div class="user-pic d-flex justify-content-center align-items-center">
+                                             <!-- Inserire avatar dinamico -->
+                                            <img class="user-thumb" :src="contacts[activeContact].avatar" alt>
                                         </div>
                                         <div
                                             class="contact-info d-flex flex-column">
                                             <div class="contact-name">
-                                                <h6>Michele</h6>
+                                                <!--  dinamico -->
+                                                <h6>{{contacts[activeContact].name}}</h6>
                                             </div>
-                                            <div class="last-msg">
+                                            <div class="last-msg">  <!--  dinamico -->
                                                 <p class="m-0">Ultimo accesso
                                                     oggi alle 12:00</p>
                                             </div>
@@ -127,36 +129,33 @@
                                         <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                                     </div>
                                 </div>
-                                <div class="chat ">
-                                    <div
-                                        class="user-msg-right d-flex justify-content-end m-2">
+                                <div class="chat d-flex flex-column">
+                                    
                                         <div class="user-msg">
-                                            <p>Hai portato a spasso il cane ?</p>
-                                            <div class="hour-sent">
-                                                <p>15:30</p>
+                                            <p>Hai portato a spasso il cane ?</p>  <!--  dinamico -->
+                                            <div class="hour-sent">  
+                                                <p>15:30</p>  <!--  dinamico -->
                                             </div>
                                         </div>
-                                    </div>
-                                    <div
-                                        class="user-msg-right d-flex justify-content-end m-2">
+                                    
+                                   
                                         <div class="user-msg d-flex">
-                                            <p>Hai portato a spasso il cane ?</p>
+                                            <p>Hai portato a spasso il cane ?</p>  <!--  dinamico -->
                                             <div class="hour-sent">
-                                                <p>16:15</p>
+                                                <p>16:15</p>  <!--  dinamico -->
                                             </div>
 
                                         </div>
 
-                                    </div>
-                                    <div
-                                        class="contact-msg-left d-flex justify-content-start m-2">
+                                  
+                                   
                                         <div class="contact-msg">
                                             <p>Tutto fatto!</p>
                                             <div class="hour-sent">
                                                 <p>15:50</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    
                                    
                                 </div>
                                 <div class="write-bar d-flex justify-content-center align-items-center gap-4">

@@ -134,6 +134,8 @@ h6, p{
 
 .user-msg{
     background-color: var(--bz-app-success);
+    align-self: flex-end;
+    
 }
 
 .user-msg, .contact-msg{
@@ -142,7 +144,7 @@ h6, p{
     padding: 1rem;
     border-radius: 10px;
     position: relative;
-    margin: 0 2rem;
+    margin: 0 2rem 1rem;
 }
 
 .user-msg p, .contact-msg p{
@@ -179,5 +181,9 @@ h6, p{
 
 .chat{
     overflow: auto;
-    margin-top: -300px;
+    margin-top: -250px;
+}
+
+.active{
+    background-color: #dbdbdb88;
 }
