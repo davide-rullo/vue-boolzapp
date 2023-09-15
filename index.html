@@ -140,7 +140,7 @@
                                 </div>
                                 <div class="write-bar d-flex justify-content-center align-items-center gap-4">
                                    <a href="#"><i class="fa-regular fa-face-smile"></i></a> 
-                                    <input v-on:keyup.enter="sendMsg(activeContact)" v-model="newMsg" class="form-control" type="text" placeholder="Scrivi un messaggio" aria-label="default input example">
+                                    <input v-on:keyup.enter="sendMsg(activeContact); msgAnswer(activeContact);" v-model="newMsg" class="form-control" type="text" placeholder="Scrivi un messaggio" aria-label="default input example">
                                     <a href="#"><i class="fa-solid fa-microphone"></i></a>
                                 </div>
                             </div>

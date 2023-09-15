@@ -165,7 +165,7 @@ createApp({
                         }
                     ],
                 }
-                
+
             ]
 
         };
@@ -173,11 +173,11 @@ createApp({
     },
 
     methods: {
-        selectChat(index){
+        selectChat(index) {
             this.activeContact = index;
         },
 
-        sendMsg(activeContact){
+        sendMsg(activeContact) {
             let newMsgObj = {
                 date: '0',
                 message: this.newMsg,
@@ -185,8 +185,25 @@ createApp({
             };
             this.contacts[activeContact].messages.push(newMsgObj);
             this.newMsg = '';
-            
+
+        },
+
+        msgAnswer(activeContact){
+            let answer = {
+                date: '0',
+                message: "Ok",
+                status: 'received'
+            };
+            this.contacts[activeContact].messages.push(answer);
+        },
+
+        msgAnswerTimeout(){
+            this.auto = setTimeout(this.msgAnswer, 3000);
         }
+    },
+
+    created() {
+        this.msgAnswerTimeout()
     }
 
 }).mount('#app')
