@@ -174,8 +174,18 @@ createApp({
 
     methods: {
         selectChat(index){
-            console.log("ho cliccato" + index);
             this.activeContact = index;
+        },
+
+        sendMsg(activeContact){
+            let newMsgObj = {
+                date: '0',
+                message: this.newMsg,
+                status: 'sent'
+            };
+            this.contacts[activeContact].messages.push(newMsgObj);
+            this.newMsg = '';
+            
         }
     }
 
