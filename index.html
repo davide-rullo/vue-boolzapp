@@ -64,9 +64,8 @@
                                 <span class="input-group-text"
                                     id="addon-wrapping"><i
                                         class="fa-solid fa-magnifying-glass"></i></span>
-                                <input class="form-control"
-                                    list="datalistOptions"
-                                    id="exampleDataList"
+                                        
+                                <input class="form-control" @keyup="searchContact()" v-model="search"  list="datalistOptions" id="exampleDataList"
                                     placeholder="Cerca o inizia una nuova chat">
                                 <datalist id="datalistOptions">
                                     <option value>
@@ -76,8 +75,13 @@
 
                                 <!-- Contatti dinamici -->
                                 <div class="all-contacts">
-                                
-                                    <div class="contact d-flex justify-content-between p-2" :class="index === activeContact ? 'active' : '' " v-for="(contact, index) in contacts" @click="selectChat(index)">
+
+                               <!-- cicla e Mostra solo se visible=true -->
+                                    <template v-for="(contact, index) in contacts">
+                                    <div class="contact d-flex justify-content-between p-2" :class="index === activeContact ? 'active' : '' "  @click="selectChat(index)" v-if="contact.visible" >
+                                        
+                                        
+                                        
                                         <div class="user-left d-flex gap-4">
                                             <div
                                                 class="user-pic d-flex justify-content-center align-items-center">
@@ -93,12 +97,16 @@
                                                     <p>Ultimo messaggio inviato</p>
                                                 </div>
                                             </div>
+                                            <div class="hour">
+                                                <p>12:00</p>
+                                            </div>
                                         </div>
-                                        <div class="hour">
-                                            <p>12:00</p>
-                                        </div>
-                                    </div>
-                              
+                                        
+                                    
+                                </div>
+
+                                 </template>
+
                             </div>
                             </div>
                             <div class="right d-flex flex-column justify-content-between">
@@ -133,7 +141,7 @@
                                         <div v-for="(message,index) in contacts[activeContact].messages" :class="message.status === 'sent' ? 'user-msg' : 'contact-msg'">
                                             <p>{{contacts[activeContact].messages[index].message}}</p>  <!--  dinamico -->
                                             <div class="hour-sent">  
-                                                <p>15:30</p>  <!--  dinamico -->
+                                                <p>{{contacts[activeContact].messages[index].date}}</p>  <!--  dinamico -->
                                             </div>
                                         </div>
                                       

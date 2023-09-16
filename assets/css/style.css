@@ -86,6 +86,7 @@ h6, p{
 
 .notify-msg {
     background-color: var(--bz-app-focus);
+    height: 85px;
 
 }
 
