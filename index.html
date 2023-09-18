@@ -136,10 +136,17 @@
                                     </div>
                                 </div>
                                 <div class="chat d-flex flex-column">
-                                        <div v-for="(message,index) in contacts[activeContact].messages" :class="message.status === 'sent' ? 'user-msg' : 'contact-msg'">
+                                        <div v-for="(message, index) in contacts[activeContact].messages" :class="message.status === 'sent' ? 'user-msg' : 'contact-msg'">
                                             <p>{{contacts[activeContact].messages[index].message}}</p>  <!--  dinamico -->
                                             <div class="hour-sent">  
                                                 <p>{{contacts[activeContact].messages[index].date}}</p>  <!--  dinamico -->
+                                            </div>
+                                            <div class="msg-option dropdown">
+                                                <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-chevron-down fa-xs"></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Info messaggio</a></li>
+                                                    <li><a class="dropdown-item" @click="deleteMsg(activeContact, index)" href="#">Elimina</a></li>
+                                                  </ul>
                                             </div>
                                         </div>
                                       

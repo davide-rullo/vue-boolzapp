@@ -205,3 +205,9 @@ p {
 .active {
     background-color: #dbdbdb88;
 }
+
+.msg-option{
+    position: absolute;
+    top: 0;
+    right: 5px;
+}

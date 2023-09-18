@@ -215,6 +215,13 @@ createApp({
                     contact.visible = false;
                 }
             });
+        },
+
+        deleteMsg(activeContact, index){
+            console.log(index)
+            console.log(activeContact)
+
+            this.contacts[activeContact].messages.splice(index, 1)
         }
 
         
