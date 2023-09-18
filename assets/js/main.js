@@ -187,7 +187,7 @@ createApp({
         sendMsg(activeContact) {
             if (this.newMsg.text != "") {
                 let newMsgObj = {
-                    date: '0',
+                    date: '10/01/2020 17:30:55',
                     message: this.newMsg,
                     status: 'sent'
                 };
@@ -200,7 +200,7 @@ createApp({
 
             msgAnswer = setTimeout(() => {
                 let answer = {
-                    date: '0',
+                    date: '10/01/2020 18:30:55',
                     message: "Ok",
                     status: 'received'
                 };
@@ -241,7 +241,7 @@ createApp({
            
 
           
-        }
+        },
 
         
     },
