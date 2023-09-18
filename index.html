@@ -139,7 +139,7 @@
                                         <div v-for="(message, index) in contacts[activeContact].messages" :class="message.status === 'sent' ? 'user-msg' : 'contact-msg'">
                                             <p>{{contacts[activeContact].messages[index].message}}</p>  <!--  dinamico -->
                                             <div class="hour-sent">  
-                                                <p>{{contacts[activeContact].messages[index].date}}</p>  <!--  dinamico -->
+                                                <p>{{changeDate(activeContact, index)}}</p>  <!--  dinamico -->
                                             </div>
                                             <div class="msg-option dropdown">
                                                 <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-chevron-down fa-xs"></i></a>
@@ -161,6 +161,9 @@
                     </div>
                 </main>
             </div>
+            <script src="
+            https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js
+            "></script>
             <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
             <script
                 src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

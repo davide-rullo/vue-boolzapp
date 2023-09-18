@@ -1,9 +1,12 @@
+const DateTime = luxon.DateTime
 const { createApp } = Vue
 createApp({
     data() {
         return {
+        
             activeContact: 0,
             search: "",
+            formattedDate: "",
            
             contacts: [
                 {
@@ -174,7 +177,9 @@ createApp({
 
     },
 
-    methods: {
+    methods:
+ 
+    {
         selectChat(index) {
             this.activeContact = index;
         },
@@ -219,6 +224,23 @@ createApp({
 
         deleteMsg(activeContact, index){
             this.contacts[activeContact].messages.splice(index, 1)
+        },
+
+        changeDate(activeContact, index){
+
+           let dateComplete = this.contacts[activeContact].messages[index].date;
+           const dateProv = DateTime.fromFormat(dateComplete,'dd/MM/yyyy HH:mm:ss');
+           const dateISO = dateProv.toISO()
+
+            const hour = DateTime.fromISO(dateISO).toFormat("HH:mm");
+
+            console.log(dateISO);
+            console.log(hour);
+            
+          return hour;
+           
+
+          
         }
 
         
@@ -227,3 +249,5 @@ createApp({
    
 
 }).mount('#app')
+
+
