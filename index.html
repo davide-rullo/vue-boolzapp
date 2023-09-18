@@ -59,18 +59,16 @@
                                 </div>
 
                             </div>
-                            <div class="search d-flex">
+                            <div class="search d-flex input-group">
                                 <label for="exampleDataList" class="form-label"></label>
-                                <span class="input-group-text"
+                                <span class="input-group-text search-btn"
                                     id="addon-wrapping"><i
-                                        class="fa-solid fa-magnifying-glass"></i></span>
+                                        class="fa-solid fa-magnifying-glass fa-sm"></i></span>
                                         
                                 <input class="form-control" @keyup="searchContact()" v-model="search"  list="datalistOptions" id="exampleDataList"
                                     placeholder="Cerca o inizia una nuova chat">
-                                <datalist id="datalistOptions">
-                                    <option value>
-
-                                    </datalist>
+                                    
+                               
                                 </div>
 
                                 <!-- Contatti dinamici -->
@@ -97,11 +95,11 @@
                                                     <p>Ultimo messaggio inviato</p>
                                                 </div>
                                             </div>
-                                            <div class="hour">
-                                                <p>12:00</p>
-                                            </div>
+                                            
                                         </div>
-                                        
+                                        <div class="hour">
+                                            <p>12:00</p>
+                                        </div>
                                     
                                 </div>
 
