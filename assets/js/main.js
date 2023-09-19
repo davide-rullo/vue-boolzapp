@@ -234,8 +234,7 @@ createApp({
 
             const hour = DateTime.fromISO(dateISO).toFormat("HH:mm");
 
-            console.log(dateISO);
-            console.log(hour);
+          
             
           return hour;
            

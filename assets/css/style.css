@@ -7,9 +7,13 @@
     --bz-app-focus: #8EDAFC;
 }
 
+body{
+    overflow: hidden;
+}
+
 a {
     color: rgba(128, 128, 128, 0.651);
-    ;
+   
 }
 
 h6,
@@ -48,7 +52,7 @@ p {
     position: absolute;
     top: 70px;
     padding: 0;
-    height: 850px;
+    height: 786px;
 }
 
 .right {
@@ -193,7 +197,7 @@ p {
 }
 
 .all-contacts {
-    height: 596px;
+    height: 530px;
     overflow: auto;
 }
 
